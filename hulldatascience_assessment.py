@@ -65,7 +65,7 @@ sns.set_style('whitegrid')
 
 # Load the data
 
-training_data = pd.read_csv('/content/Training_Dataset.csv')
+training_data = pd.read_csv('Training_Dataset.csv')
 training_data.info()
 
 print(training_data.columns)
@@ -887,7 +887,7 @@ for i, (train_index, test_index) in enumerate(cv):
 """The AUC Scores look greatshow we have trained the models, now time to make and export our predictions on the test data:"""
 
 # Import the test data and review for missing information, clean up accordingly using same process as above
-test_data = pd.read_csv('/content/Test_Dataset.csv')
+test_data = pd.read_csv('Test_Dataset.csv')
 final_answers = test_data.iloc[:, -3:]
 test_data = test_data.drop(final_answers.columns, axis=1)
 test_data.columns = test_data.columns.str.lower()
